@@ -1,1 +1,1 @@
-var Widgets = require('./Widgets.jsx');
+var Card = require('./Card.jsx');
