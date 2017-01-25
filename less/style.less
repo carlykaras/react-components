@@ -1,0 +1,38 @@
+@text-color: #444;
+@box-shadow: rgba(45,45,45,.65);
+@clear: rgba(0,0,0,0);
+
+body {
+    color: @text-color;
+}
+
+
+.card {
+    display: inline-block;
+    width: 250px;
+    border: 1px solid @box-shadow;
+    box-shadow: 5px 5px @box-shadow;
+
+    section {
+        padding: 5px;
+        margin-top: 5px;
+    }
+}
+
+.small {
+    height: 200px;
+    transition: .5s height;
+    .extra {
+        color: @clear;
+        transition: .35s color;
+    }
+}
+
+.big {
+    height: 275px;
+    transition: .5s height;
+    .extra {
+        color: @text-color;
+        transition: 1.5s color;
+    }
+}
