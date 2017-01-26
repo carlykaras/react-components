@@ -2,24 +2,30 @@ var React = require('react'),
     ReactDOM = require('react-dom');
 
 
-var Card = React.createClass({
-    getInitialState: function () {
-        return {
+class Card extends React.Component {
+
+    constructor(props) {
+      super(props);
+      this.state = {
             expanded: false,
             labelText: "Text here",
             sectionText: "This is a full section, with a lot of text to demonstrate that expanding the card will give you much more information."
-        };
-    },
-    click: function () {
+      };
+      this.click = this.click.bind(this);
+    }
+
+    click () {
         this.setState({ expanded: !this.state.expanded });
-    },
-    getClassNames: function (expanded) {
+    }
+
+    getClassNames (expanded) {
         return [
             "card",
             expanded ? "big":"small"
         ].join(" ");
-    },
-    render: function() {
+    }
+
+    render () {
         var imageurl = this.props.img,
             expanded = this.state.expanded;
         return (
@@ -30,7 +36,7 @@ var Card = React.createClass({
             </div>
         );
     }
-});
+}
 
 ReactDOM.render(
     <Card img="https://placeholdit.imgix.net/~text?txtsize=40&txt=250%C3%97150&w=250&h=150"/>,
