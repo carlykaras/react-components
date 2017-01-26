@@ -1,6 +1,4 @@
-var React = require('react'),
-    ReactDOM = require('react-dom');
-
+import React from 'react';
 
 class Card extends React.Component {
 
@@ -38,7 +36,4 @@ class Card extends React.Component {
     }
 }
 
-ReactDOM.render(
-    <Card img="https://placeholdit.imgix.net/~text?txtsize=40&txt=250%C3%97150&w=250&h=150"/>,
-    document.getElementById("container")
-);
+export default Card;
